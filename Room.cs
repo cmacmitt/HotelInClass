@@ -10,6 +10,8 @@ namespace HotelInClass
     {
         public string Number { get; set; }
         public int Capacity { get; set; }
+        public bool IsOccupied { get; set; } = false;
+
         private List<Reservation> _Reservations { get; set; }
 
         public Room(string number, int capacity)

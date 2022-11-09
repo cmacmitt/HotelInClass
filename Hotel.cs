@@ -48,5 +48,34 @@ namespace HotelInClass
                 Console.WriteLine(reservation.GetClientName());
             }
         }
+
+        private Client FindClientByName(string name)
+        {
+            foreach (Client client in _Clients)
+            {
+                if (client.Name == name)
+                {
+                   return client;
+                }
+            }
+            return null;
+        }
+
+        public void CheckIn(string name)
+        {
+            // check if the client exists
+            // check if they have a reservation
+            // check if the room has correct capacity for the 'party'
+            // check if the room is occupied
+            // if they don't have a reservation
+                // do we have a room available
+                // create a reservation for the room
+            // check if the reservation is current   
+        }
+
+        public void CheckIn(int reservationId)
+        {
+
+        }
     }
 }
