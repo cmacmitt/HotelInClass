@@ -10,13 +10,23 @@ namespace HotelInClass
     {
         public string Number { get; set; }
         public int Capacity { get; set; }
-        public List<Reservation> Reservations { get; set; }
+        private List<Reservation> _Reservations { get; set; }
 
         public Room(string number, int capacity)
         {
             Number = number;
             Capacity = capacity;
-            Reservations = new List<Reservation>();
+            _Reservations = new List<Reservation>();
+        }
+
+        public void AddReservation(Reservation reservation)
+        {
+            _Reservations.Add(reservation);
+        }
+
+        public List<Reservation> GetReservations()
+        {
+            return _Reservations;
         }
     }
 }

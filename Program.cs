@@ -15,3 +15,8 @@ Client mary = new Client("mary", 1234123412341234);
 
 myHotel.AddClient(bob);
 myHotel.AddClient(mary);
+
+myHotel.AddReservation(rm1, mary, DateTime.Now);
+myHotel.AddReservation(rm2, bob, DateTime.Now);
+
+myHotel.PrintReservations();

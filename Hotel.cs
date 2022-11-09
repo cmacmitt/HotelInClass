@@ -32,5 +32,21 @@ namespace HotelInClass
         {
             _Clients.Add(client);
         }
+
+        public void AddReservation(Room room, Client client, DateTime date)
+        {
+            Reservation newReservation = new Reservation(room, client, date);
+            _Reservations.Add(newReservation);
+            client.AddReservation(newReservation);
+            room.AddReservation(newReservation);
+        }
+
+        public void PrintReservations()
+        {
+            foreach (Reservation reservation in _Reservations)
+            {
+                Console.WriteLine(reservation.GetClientName());
+            }
+        }
     }
 }

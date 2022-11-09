@@ -8,17 +8,23 @@ namespace HotelInClass
 {
     internal class Reservation
     {
-        public Room Room { get; set; }
-        public Client Client { get; set; }
-        public int Occupants { get; set; }
-        public DateTime Date { get; set; }
-        public bool isCurrent { get; set; }
+        private Room Room { get; set; }
+        private Client Client { get; set; }
+        private int Occupants { get; set; }
+        private DateTime Date { get; set; }
+        private bool isCurrent { get; set; }
 
-        public Reservation(Room room, Client client, DateTime date)
+        public Reservation(Room room, Client client, DateTime date, int occupants = 1)
         {
             Room = room;
             Client = client;
             Date = date;
+            Occupants = occupants;
+        }
+
+        public string GetClientName()
+        {
+            return Client.Name;
         }
     }
 }

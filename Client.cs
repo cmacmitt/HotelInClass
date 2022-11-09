@@ -10,15 +10,24 @@ namespace HotelInClass
     {
         public string Name { get; set; }
         private long CreditCard { get; set; }
-        public List<Reservation> Reservations { get; set; }
+        private List<Reservation> _Reservations { get; set; }
 
         public Client(string name, long creditCard)
         {
             Name = name;
             CreditCard = creditCard;
-            Reservations = new List<Reservation>();
+            _Reservations = new List<Reservation>();
         }
 
+        public void AddReservation(Reservation reservation)
+        {
+            _Reservations.Add(reservation);
+        }
+
+        public List<Reservation> GetReservations()
+        {
+            return _Reservations;
+        }
 
     }
 }
