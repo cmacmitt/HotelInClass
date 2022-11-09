@@ -64,7 +64,9 @@ namespace HotelInClass
         public void CheckIn(string name)
         {
             // check if the client exists
+                // if they don't exist, create a new client
             // check if they have a reservation
+                
             // check if the room has correct capacity for the 'party'
             // check if the room is occupied
             // if they don't have a reservation
